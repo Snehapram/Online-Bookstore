@@ -1,2 +1,4 @@
 # Online-Bookstore
- 
+The Online Book Store Project is a web-based application designed to streamline the operations of a bookstore and enhance the customer experience. Built using the Spring Boot framework, this project allows users to seamlessly browse, search for, and purchase books online. Customers can easily navigate the bookstore's catalog, add desired items to their cart, and securely complete their transactions. Beyond the customer-facing features, the system also provides robust administrative functionalities. These administrative tools empower bookstore managers to efficiently manage their inventory, process customer orders, track sales data, and oversee other essential bookstore operations. The core objective of this project is to create a scalable and reliable web application using Spring Boot that simplifies and automates key processes involved in running a successful online bookstore. This includes simplifying inventory management, facilitating smooth customer transactions, and providing comprehensive administrative control.
+
+Referance link https://drive.google.com/file/d/1FmpB05hrQ-7Q63bpdtAVzqoYjqPAQJFV/view?usp=sharing
