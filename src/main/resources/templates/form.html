@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="layout :: head"></head>
+
+<body>
+	<nav th:replace="layout :: header"></nav>
+
+	<div class="container" id="main-content">
+		<div class="row d-flex justify-content-center">
+			<form style="min-width: 350px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9;" action="#" th:action="@{/book/save}"
+				th:object="${book}" method="post">
+				<h5 class="text-center mb-4">Book Form</h5>
+
+				<input type="hidden" th:field="*{id}" />
+
+				<div class="form-group">
+					<label for="name">Book Name</label>
+					<input class="form-control" type="text" id="name" placeholder="Enter book name"
+						th:field="*{name}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></em>
+				</div>
+
+				<div class="form-group">
+					<label for="price">Book Price (₹)</label>
+					<input class="form-control" type="number" id="price" placeholder="Enter book price"
+						step="any" th:field="*{price}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></em>
+				</div>
+
+				<div class="form-group">
+					<label for="authors">Book Authors</label>
+					<input class="form-control" type="text" id="authors" placeholder="Enter author names"
+						th:field="*{authors}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('authors')}" th:errors="*{authors}"></em>
+				</div>
+
+				<div class="form-group">
+					<label for="isbn">Book ISBN</label>
+					<input class="form-control" type="text" id="isbn" placeholder="Enter book ISBN"
+						th:field="*{isbn}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}"></em>
+				</div>
+
+				<div class="form-group">
+					<label for="publisher">Book Publisher</label>
+					<input class="form-control" type="text" id="publisher" placeholder="Enter publisher name"
+						th:field="*{publisher}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}"></em>
+				</div>
+
+				<div class="form-group">
+					<label for="publishedOn">Published On</label>
+					<input class="form-control" type="date" id="publishedOn"
+						th:field="*{publishedOn}" th:errorclass="field-error" />
+					<em th:if="${#fields.hasErrors('publishedOn')}" th:errors="*{publishedOn}"></em>
+				</div>
+
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-save"></i> Save
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
